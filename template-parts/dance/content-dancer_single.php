@@ -7,7 +7,7 @@
 	<?php if(has_post_thumbnail($post->ID)) : ?>
 		<?php echo get_the_post_thumbnail( $post->ID, 'normal' ); ?>
 	<?php else:?>
-		<?php echo '<img src="' . get_template_directory_uri (). '/images/photo_no_available.png" />'; ?>
+		<?php echo '<img src="' . get_template_directory_uri (). '/images/photo_no_available_dance.jpg" />'; ?>
 	<?php endif;?>
 	<div class="caption">
 		<a style="color:<?php echo $color; ?>" href="<?php echo esc_url($facebook_url); ?>"><i class="fa fa-facebook-official fa-3x"></i></a>
