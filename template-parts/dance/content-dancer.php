@@ -2,7 +2,7 @@
 	<?php if(has_post_thumbnail($post->ID)) : ?>
 		<?php the_post_thumbnail('cover'); ?>
 	<?php else:?>
-		<?php echo '<img src="' . get_template_directory_uri (). '/images/photo_no_available.png" />'; ?>
+		<?php echo '<img src="' . get_template_directory_uri (). '/images/photo_no_available_dance.jpg" />'; ?>
 	<?php endif;?>
 	
 	<div class="caption">
