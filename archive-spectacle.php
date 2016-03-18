@@ -9,7 +9,7 @@
 		<?php while (have_posts()) : the_post(); ?>
 			<div class="col-xs-6 col-md-3">
 			<?php 
-				get_template_part( 'template-parts/dance/content', 'dancer' );
+				get_template_part( 'template-parts/dance/content', 'spectacle' );
 			?>
 			</div>
 		<?php endwhile; ?>
