@@ -8,7 +8,7 @@ function my_general_section() {
         'link_section_options_callback', // Callback
         'general' // What Page?  This makes the section show up on the General Settings Page
     );
-    add_settings_field( // Option 2
+    add_settings_field( // Option 1
         'facebook_link', // Option ID
         'Lien Facebook', // Label
         'link_callback', // !important - This is where the args go!
@@ -19,7 +19,7 @@ function my_general_section() {
         )  
     ); 
 
-    add_settings_field( // Option 1
+    add_settings_field( // Option 2
         'twitter_link', // Option ID
         'Lien Twitter', // Label
         'link_callback', // !important - This is where the args go!
@@ -30,7 +30,7 @@ function my_general_section() {
         )  
     );
 
-    add_settings_field( // Option 1
+    add_settings_field( // Option 3
         'google_link', // Option ID
         'Lien Google +', // Label
         'link_callback', // !important - This is where the args go!
@@ -48,7 +48,7 @@ function my_general_section() {
 }
 
 function link_section_options_callback() { // Section Callback
-    echo '<p>Mettez les liens importants de votre blog ici</p>';  
+    echo '<p>Mettez les liens (entiers) importants de votre blog ici!</p>';  
 }
 
 function link_callback($args) {  // Textbox Callback

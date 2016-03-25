@@ -14,7 +14,11 @@
 					<h1 class="blog-title">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo( get_bloginfo( 'title' ) ); ?></a>
 					</h1>
-					<span> RESEAUX SOCIAUX </span>
+					<span> <a href="<?php echo get_option('facebook_link') ;?>" target="_blank">Facebook</a> </span>
+					<span>-</span>
+					<span> <a href="<?php echo get_option('twitter_link') ;?>" target="_blank">Twitter</a> </span>
+					<span>-</span>
+					<span> <a href="<?php echo get_option('google_link') ;?>" target="_blank">Google +</a> </span>
 				<?php endif; ?>
 				</div>
 			</footer>
