@@ -19,7 +19,9 @@
 				</div>
 			</footer>
 			<?php wp_footer(); ?>
-			<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+			<!-- Bon qd le site sera en ligne!
+			<script type ="text/javascript" src="<?php echo get_template_directory(); ?>/js/isotope.pkgd.min.js"></script> -->
+			<script type ="text/javascript" src="http://localhost/wordpress_DM/wp-content/themes/dance/js/isotope.pkgd.min.js"></script> 
 		</div>
 		<!-- Fin .container -->
 	</body>

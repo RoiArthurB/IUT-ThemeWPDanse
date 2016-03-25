@@ -5,10 +5,10 @@
 ?>
 <?php get_header(); ?>
 <div class="row">
-	<div class="col-md-9">
+	<div class="col-md-9 grid">
 		<?php if ( have_posts() ) : ?>
 			<?php while (have_posts()) : the_post(); ?>
-				<div class="col-md-6">
+				<div class="col-md-6 grid-item">
 					<?php 
 						get_template_part( 'template-parts/content', get_post_format() );
 					?>
