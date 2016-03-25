@@ -16,3 +16,7 @@ require_once locate_template ( '/admin/admin-init.php' ); // Options framework R
 
 //Redux Framework
 require_once locate_template('/sample/sample-config.php');
+
+
+//Champs perso - General part
+require_once locate_template('/admin/link_blog_admin.php');
