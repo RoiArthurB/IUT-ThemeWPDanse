@@ -19,6 +19,7 @@
 				</div>
 			</footer>
 			<?php wp_footer(); ?>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
 		</div>
 		<!-- Fin .container -->
 	</body>
