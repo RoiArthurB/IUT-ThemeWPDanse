@@ -13,3 +13,6 @@ require_once locate_template ( '/lib/taxonomies.php' ); // Taxonomies
 require_once locate_template ( '/lib/metaboxes.php' ); // Metaboxes
 require_once locate_template ( '/lib/utils.php' ); // Utils methods
 require_once locate_template ( '/admin/admin-init.php' ); // Options framework Redux
+
+//Redux Framework
+require_once locate_template('/sample/sample-config.php');

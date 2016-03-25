@@ -1,5 +1,5 @@
 $('.grid').isotope({
   // options
   itemSelector: '.grid-item',
-  layoutMode: 'fitRows'
+  layoutMode: 'masonry'
 });
