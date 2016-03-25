@@ -21,8 +21,10 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 			<?php wp_footer(); ?>
 			<!-- Bon qd le site sera en ligne!
-			<script type ="text/javascript" src="<?php echo get_template_directory(); ?>/js/isotope.pkgd.min.js"></script> -->
-			<script type ="text/javascript" src="http://localhost/wordpress_DM/wp-content/themes/dance/js/isotope.pkgd.min.js"></script> 
+			<script type ="text/javascript" src="<?php echo get_template_directory(); ?>/js/isotope.pkgd.min.js"></script>
+			<script type="text/javascript" src="<?php echo get_template_directory(); ?>/js/app.js"></script> -->
+			<script type ="text/javascript" src="http://localhost/wordpress_DM/wp-content/themes/dance/js/isotope.pkgd.min.js"></script>
+			<script type ="text/javascript" src="http://localhost/wordpress_DM/wp-content/themes/dance/js/app.js"></script> 
 		</div>
 		<!-- Fin .container -->
 	</body>
