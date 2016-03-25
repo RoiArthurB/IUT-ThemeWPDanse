@@ -1,3 +1,5 @@
+<?php 
+
 add_action('admin_init', 'my_general_section');  
 function my_general_section() {  
     add_settings_section(  
