@@ -4,7 +4,7 @@
 */
 ?>
 <?php get_header(); ?>
-<div class="row">
+<div class="row" style="padding-bottom: 40px;">
 	<?php	// Caroussel des prochains spectacles	
 	$args = array('post_type' => 'spectacle');
 	
@@ -15,14 +15,16 @@
 
 	<?php //Display the contents
 	while ( $loop->have_posts() ) : $loop->the_post();
+
+		if ( has_post_thumbnail( $post->ID) ) : //Test pour voir s'il y a une img de base
 	?>
+	<?php // Si oui ?>
 		<li><img src="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 720,405 ), false, '' ); echo $src[0];?>"/></li>
-		<!--
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-		<div class="entry-content">
-			<?php the_content(); ?>
-		</div>
-		-->
+
+	<?php else : //Si non?>
+		<?php echo '<img src="' . get_template_directory_uri (). '/images/photo_no_available_dance.jpg" />'; ?>
+
+	<?php endif; ?>
 	<?php endwhile;?>
 
 	</ul>
