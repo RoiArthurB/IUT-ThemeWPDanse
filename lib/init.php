@@ -25,10 +25,10 @@ function dance_widgets_init() {
 			'name' => __ ( 'Primary Sidebar', 'dance' ),
 			'id' => 'sidebar-1',
 			'description' => __ ( 'Main sidebar that appears on the right.', 'dance' ),
-			'before_widget' => '<div id="%1$s" class="panel panel-default"><div class="panel-heading">',
-			'after_widget' => '</div></div>',
-			'before_title' => '<h3 class="panel-title">',
-			'after_title' => '</h3></div><div class="panel-body">'
+			'before_widget' => '<div id="%1$s" class="">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">',
+			'after_title' => '</span></h4></div><div class="panel-body">'
 	) );
 }
 endif;

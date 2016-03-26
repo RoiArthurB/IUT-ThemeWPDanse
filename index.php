@@ -46,7 +46,7 @@
 		</div>
 	</div>
 
-	<div class="col-md-3">
+	<div id="sidebar" class="col-md-3">
 		<?php get_sidebar();?>
 	</div>
 </div>
