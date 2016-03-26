@@ -22,4 +22,33 @@ $layout = $redux_starter["opt-layout"];
 			<header id="header" class="row">	
 				<div id="logo" class="col-md-12"></div>			
 				<?php get_template_part('template-parts/menu'); ?>
+
+				<!-- Title -->
+				<div class="col-md-12" style="text-align: center;">
+				<!-- Title -->
+					<h1 class="blog-title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo( get_bloginfo( 'title' ) ); ?></a>
+					</h1>
+				<!-- Slogan -->
+					<div class="header-slogan">
+						<h2 class="header-slogan-text">
+							<?php bloginfo('description'); ?>
+						</h2>
+					</div>
+					<div class="header-social">
+						<div class="inner-header-social">
+							<a href="<?php echo get_option('facebook_link') ;?>" target="_blank"><i class="fa fa-facebook"></i></a>
+
+							<a href="<?php echo get_option('twitter_link') ;?>" target="_blank"><i class="fa fa-twitter"></i></a> 
+
+							<a href="<?php echo get_option('google_link') ;?>" target="_blank"><i class="fa fa-google-plus"></i></a>
+
+							<a href="<?php echo get_option('instagram_link') ;?>" target="_blank"><i class="fa fa-instagram"></i></a>
+
+							<a href="<?php echo get_option('pinterest_link') ;?>" target="_blank"><i class="fa fa-pinterest"></i></a>
+
+							<a href="<?php echo get_option('tumblr_link') ;?>" target="_blank"><i class="fa fa-tumblr"></i></a>
+						</div>
+					</div>
+				</div>
 			</header>

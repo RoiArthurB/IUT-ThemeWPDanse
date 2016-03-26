@@ -11,30 +11,25 @@
 						) );
 					?>
 				<?php else : ?>
-					<h1 class="blog-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo( get_bloginfo( 'title' ) ); ?></a>
-					</h1>
-					<span> <a href="<?php echo get_option('facebook_link') ;?>" target="_blank"><i class="fa fa-facebook"></i></a> </span>
+			<!-- Title -->
+				<h1 class="blog-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo( get_bloginfo( 'title' ) ); ?></a>
+				</h1>
+				<div class="header-social">
+					<div class="inner-header-social">
+						<a href="<?php echo get_option('facebook_link') ;?>" target="_blank"><i class="fa fa-facebook"></i></a>
 
-					<span>-</span>
+						<a href="<?php echo get_option('twitter_link') ;?>" target="_blank"><i class="fa fa-twitter"></i></a> 
 
-					<span> <a href="<?php echo get_option('twitter_link') ;?>" target="_blank"><i class="fa fa-twitter"></i></a> </span>
+						<a href="<?php echo get_option('google_link') ;?>" target="_blank"><i class="fa fa-google-plus"></i></a>
 
-					<span>-</span>
+						<a href="<?php echo get_option('instagram_link') ;?>" target="_blank"><i class="fa fa-instagram"></i></a>
 
-					<span> <a href="<?php echo get_option('google_link') ;?>" target="_blank"><i class="fa fa-google-plus"></i></a> </span>
+						<a href="<?php echo get_option('pinterest_link') ;?>" target="_blank"><i class="fa fa-pinterest"></i></a>
 
-					<span>-</span>
-
-					<span> <a href="<?php echo get_option('instagram_link') ;?>" target="_blank"><i class="fa fa-instagram"></i></a> </span>
-
-					<span>-</span>
-
-					<span> <a href="<?php echo get_option('pinterest_link') ;?>" target="_blank"><i class="fa fa-pinterest"></i></a> </span>
-
-					<span>-</span>
-
-					<span> <a href="<?php echo get_option('tumblr_link') ;?>" target="_blank"><i class="fa fa-tumblr"></i></a> </span>
+						<a href="<?php echo get_option('tumblr_link') ;?>" target="_blank"><i class="fa fa-tumblr"></i></a>
+					</div>
+				</div>
 				<?php endif; ?>
 				</div>
 			</footer>

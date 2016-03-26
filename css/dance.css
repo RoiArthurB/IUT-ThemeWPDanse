@@ -94,6 +94,83 @@
 
 
 /* */
+#header, #footer{
+	padding: 40px 0;
+}
+
+#header a{
+	color: black;
+}
+#header span a{
+	font-style: none;
+}
+
+.header-slogan {
+	margin: 17px 0 0 0;
+	text-align: center;
+	line-height: 1;
+}
+.header-slogan .header-slogan-text {
+	margin: 0;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.5;
+	font-style: italic;
+	color: #313131;
+	display: inline-block;
+	position: relative;
+	font-family: 'PT Serif', serif;
+	padding: 0 15px;
+	letter-spacing: 1px;
+	vertical-align: top;
+}
+.header-slogan .header-slogan-text:before,
+.header-slogan .header-slogan-text:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	height: 1px;
+	display: block;
+	width: 60px;
+	background: #313131;
+	left: 100%;
+}
+.header-slogan .header-slogan-text:before {
+	left: auto;
+	right: 100%;
+}
+
+.header-social {
+	display: block;
+	text-align: center;
+	margin: 20px 0 0;
+}
+.header-social .inner-header-social {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}
+.header-social a {
+	float: left;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 13px;
+}
+.header-social a:last-child {
+	margin-right: 0;
+}
+.header-social a i {
+	font-size: 14px;
+	color: #313131;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.header-social a:hover i{
+	color: #6eb48c;
+}
 
 #footer a{
 	color: black;
