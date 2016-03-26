@@ -9,15 +9,23 @@
 	$args = array('post_type' => 'spectacle');
 	
 	$loop = new WP_Query( $args ); //Define the loop based on arguments
-	
-	//Display the contents
+	?>
+
+	<ul class="bxslider">
+
+	<?php //Display the contents
 	while ( $loop->have_posts() ) : $loop->the_post();
 	?>
+		<li><?php the_post_thumbnail('cover');?></li>
+		<!--
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<div class="entry-content">
 			<?php the_content(); ?>
 		</div>
+		-->
 	<?php endwhile;?>
+
+	</ul>
 </div>
 <div class="row">
 	<div class="col-md-9 ">
