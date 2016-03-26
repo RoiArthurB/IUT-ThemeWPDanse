@@ -16,7 +16,7 @@
 	<?php //Display the contents
 	while ( $loop->have_posts() ) : $loop->the_post();
 	?>
-		<li><?php the_post_thumbnail('cover');?></li>
+		<li><img src="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 720,405 ), false, '' ); echo $src[0];?>"/></li>
 		<!--
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<div class="entry-content">

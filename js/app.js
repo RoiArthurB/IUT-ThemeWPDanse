@@ -5,5 +5,11 @@ $('.grid').isotope({
 });
 
 $(document).ready(function(){
-  $('.bxslider').bxSlider();
+  $('.bxslider').bxSlider({
+	captions: true,
+	minSlides: 2,
+	maxSlides: 4,
+	slideWidth: 170,
+	slideMargin: 10
+  });
 });
