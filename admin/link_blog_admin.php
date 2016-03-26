@@ -28,7 +28,7 @@ function my_general_section() {
         array( // The $args
             'twitter_link' // Should match Option ID
         )  
-    );
+    ); 
 
     add_settings_field( // Option 3
         'google_link', // Option ID
@@ -41,10 +41,46 @@ function my_general_section() {
         )  
     ); 
 
+    add_settings_field( // Option 2
+        'instagram_link', // Option ID
+        'Lien Instagram', // Label
+        'link_callback', // !important - This is where the args go!
+        'general', // Page it will be displayed (General Settings)
+        'link_section', // Name of our section
+        array( // The $args
+            'instagram_link' // Should match Option ID
+        )  
+    );
+
+    add_settings_field( // Option 2
+        'pinterest_link', // Option ID
+        'Lien Pinterest', // Label
+        'link_callback', // !important - This is where the args go!
+        'general', // Page it will be displayed (General Settings)
+        'link_section', // Name of our section
+        array( // The $args
+            'pinterest_link' // Should match Option ID
+        )  
+    );
+
+    add_settings_field( // Option 2
+        'tumblr_link', // Option ID
+        'Lien Tumblr', // Label
+        'link_callback', // !important - This is where the args go!
+        'general', // Page it will be displayed (General Settings)
+        'link_section', // Name of our section
+        array( // The $args
+            'tumblr_link' // Should match Option ID
+        )  
+    );
+
 
     register_setting('general','facebook_link', 'esc_attr');
     register_setting('general','twitter_link', 'esc_attr');
     register_setting('general','google_link', 'esc_attr');
+    register_setting('general','instagram_link', 'esc_attr');
+    register_setting('general','pinterest_link', 'esc_attr');
+    register_setting('general','tumblr_link', 'esc_attr');
 }
 
 function link_section_options_callback() { // Section Callback

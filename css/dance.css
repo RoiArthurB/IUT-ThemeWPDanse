@@ -85,9 +85,19 @@
 }
 .penci-border-arrow:after {
 	border: 1px solid #313131;
-	left: 5px;
+	left: -5px;
 	bottom: 3px;
 	display: block;
 	z-index: 1;
 	height: 100%;
+}
+
+
+/* */
+
+#footer a{
+	color: black;
+}
+#footer span a{
+	font-style: none;
 }
