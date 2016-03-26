@@ -10,6 +10,9 @@ $layout = $redux_starter["opt-layout"];
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php wp_head(); ?>
+		<!-- BxSlider -->
+		<!-- <link href="<?php echo get_template_directory(); ?>/lib/jquery.bxslider.css" rel="stylesheet" /> -->
+		<link href="http://localhost/wordpressthemeoce/wp-content/themes/dance/lib/jquery.bxslider.css" rel="stylesheet" />
 	</head>
 	<body <?php body_class(); ?>>
 		<div class="<?php echo $layout; ?>">
