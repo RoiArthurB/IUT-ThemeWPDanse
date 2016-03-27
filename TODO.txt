@@ -1,4 +1,8 @@
 TODO:
 
-Styliser
-	- Widget
+content-archive post
+content-post
+
+date-picker spectacle
+
+min/max slider ReduxFramework

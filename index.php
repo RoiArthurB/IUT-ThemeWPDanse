@@ -1,7 +1,7 @@
 <?php
 /**
 * The main template file
-*/
+*/ 
 global $redux_starter;
 $slider = $redux_starter['switch-slider-home-page'];
 $slideSize = $redux_starter['home-slide-size'];
