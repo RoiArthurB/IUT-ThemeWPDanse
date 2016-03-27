@@ -9,6 +9,8 @@ function dance_setup() {
 
 	add_theme_support ( 'custom-header' );
 	add_theme_support ( 'post-thumbnails' );
+
+	add_image_size ( 'cover', 200, 200, true );
 }
 endif;
 add_action ( 'after_setup_theme', 'dance_setup' );

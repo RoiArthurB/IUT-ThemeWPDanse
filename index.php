@@ -36,7 +36,7 @@
 			<?php while (have_posts()) : the_post(); ?>
 			<div class="grid-item">
 				<?php
-					get_template_part( 'template-parts/content', 'dancer' );
+					get_template_part( 'template-parts/content', get_post_format() );
 				?>
 			</div>
 			<?php endwhile; ?>
