@@ -48,7 +48,7 @@
 		</div>
 	</div>
 
-	<div id="sidebar" class="col-md-3">
+	<div id="sidebar" class="col-md-3 hidden-xs hidden-sm">
 		<?php get_sidebar();?>
 	</div>
 </div>

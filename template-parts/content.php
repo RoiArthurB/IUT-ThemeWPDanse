@@ -1,11 +1,13 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<?php if ( has_post_thumbnail($post->ID) ) : ?>
-			<?php the_post_thumbnail('cover'); ?>
-		<?php else : ?>
-			<img src="https://unsplash.it/200/?random" />
-		<?php endif; ?>
-		<?php the_title( "<h3 class='panel-title'>", "</h3>" ); ?>
+		<a href="<?php the_permalink($post); ?>" style="text-decoration: none;">
+			<?php if ( has_post_thumbnail($post->ID) ) : ?>
+				<?php the_post_thumbnail('cover'); ?>
+			<?php else : ?>
+				<img src="https://unsplash.it/200/?random" />
+			<?php endif; ?>
+			<?php the_title( "<h3 class='panel-title text-center'>", "</h3>" ); ?>
+		</a>
 	</div>
 	<div class="panel-body">
 		<?php the_author(); ?> has blogged <?php the_author_posts(); ?> posts
