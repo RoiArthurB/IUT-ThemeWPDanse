@@ -1,6 +1,6 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<a href="<?php the_permalink($post); ?>" style="text-decoration: none;">
+		<a href="<?php echo get_permalink(); ?>" style="text-decoration: none;">
 			<?php if ( has_post_thumbnail($post->ID) ) : ?>
 				<?php the_post_thumbnail('cover'); ?>
 			<?php else : ?>
@@ -12,6 +12,7 @@
 	<div class="panel-body">
 		<?php the_author(); ?> has blogged <?php the_author_posts(); ?> posts
 		<p>Other posts by <?php the_author_posts_link(); ?></p> 
-    	<?php the_content( ); ?>
+    	<?php the_excerpt( ); ?>
+    	<a href="<?php echo get_permalink(); ?>"> Lire la suite...</a>
   </div>
 </div>

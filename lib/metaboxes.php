@@ -21,6 +21,12 @@ if ( file_exists(get_template_directory() . '/cmb2/init.php' ) ) {
 	require_once get_template_directory() . '/CMB2/init.php';
 }
 
+/*===================================================================
+ x                                                                  x
+ x                     			Dancer			                    x
+ x                                                                  x
+===================================================================*/
+
 add_action( 'cmb2_admin_init', 'dance_register_dancer_social_metabox' );
 function dance_register_dancer_social_metabox() {
 
@@ -65,6 +71,12 @@ function dance_register_dancer_options_metabox() {
 			'default' => '#FFAB00',
 	) );
 }
+
+/*===================================================================
+ x                                                                  x
+ x                     		spectacles			                    x
+ x                                                                  x
+===================================================================*/
 
 add_action( 'cmb2_admin_init', 'dance_register_spectacle_date_picker_metabox' );
 function dance_register_spectacle_date_picker_metabox() {
