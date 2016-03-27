@@ -1,5 +1,11 @@
 <?php 
 
+/*===================================================================
+ x                                                                  x
+ x                     Rajout des liens du blog                     x
+ x                                                                  x
+===================================================================*/
+
 add_action('admin_init', 'my_general_section');  
 function my_general_section() {  
     add_settings_section(  

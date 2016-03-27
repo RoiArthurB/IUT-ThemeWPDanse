@@ -19,10 +19,10 @@
 		if ( has_post_thumbnail( $post->ID) ) : //Test pour voir s'il y a une img de base
 	?>
 	<?php // Si oui ?>
-		<li><img src="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 720,405 ), false, '' ); echo $src[0];?>"/></li>
+		<li><img src="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 500,500 ), true, '' ); echo $src[0];?>" title="<?php the_title(); ?>"/></li>
 
 	<?php else : //Si non?>
-		<?php echo '<img src="' . get_template_directory_uri (). '/images/photo_no_available_dance.jpg" />'; ?>
+		<li><img src="http://localhost/wordpressthemeoce/wp-content/themes/dance/images/photo_no_available_dance.jpg" title="<?php the_title(); ?>"/></li>
 
 	<?php endif; ?>
 	<?php endwhile;?>
