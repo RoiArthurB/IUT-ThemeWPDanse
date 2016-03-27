@@ -35,7 +35,7 @@ function dance_register_dancer_social_metabox() {
 
 	$cmb_dance_dancer_social = new_cmb2_box( array(
 		'id'            => $prefix . 'metabox',
-		'title'         => __( 'dancer Social Informations', 'dance' ),
+		'title'         => __( 'Dancer Social Informations', 'dance' ),
 		'object_types'  => array( 'dancer', 'spectacle')
 	) );
 	
@@ -50,6 +50,14 @@ function dance_register_dancer_social_metabox() {
 			'id'   => $prefix . 'twitter',
 			'type' => 'text_url'
 	) );
+
+	$cmb_dance_dancer_social->add_field( array(
+			'name'    => __( 'Dancer Color', 'dance' ),
+			'desc'    => __( 'Select dancer color', 'dance' ),
+			'id'      => $prefix . 'dancer_color',
+			'type'    => 'colorpicker',
+			'default' => '#FFAB00',
+	) );
 }
 add_action( 'cmb2_admin_init', 'dance_register_dancer_options_metabox' );
 function dance_register_dancer_options_metabox() {
@@ -59,17 +67,54 @@ function dance_register_dancer_options_metabox() {
 
 	$cmb_dance_dancer_options = new_cmb2_box( array(
 			'id'            => $prefix . 'metabox',
-			'title'         => __( 'dancer Options', 'dance' ),
+			'title'         => __( 'Dancer Options Sup', 'dance' ),
 			'object_types'  => array( 'dancer', 'spectacle')
 	) );
 
 	$cmb_dance_dancer_options->add_field( array(
-			'name'    => __( 'dancer Color', 'dance' ),
-			'desc'    => __( 'Select dancer color', 'dance' ),
-			'id'      => $prefix . 'dancer_color',
-			'type'    => 'colorpicker',
-			'default' => '#FFAB00',
+    'name' => 'Dancer Galery',
+    'desc' => '',
+    'id'   => 'wiki_test_file_list',
+    'type' => 'file_list',
+    // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+    // Optional, override default text strings
+    'options' => array(
+        'add_upload_files_text' => 'Replacement', // default: "Add or Upload Files"
+        'remove_image_text' => 'Replacement', // default: "Remove Image"
+        'file_text' => 'Replacement', // default: "File:"
+        'file_download_text' => 'Replacement', // default: "Download"
+        'remove_text' => 'Replacement', // default: "Remove"
+    	),
 	) );
+
+	$cmb_dance_dancer_options->add_field( array(
+    'name'             => 'Slide Min',
+    'desc'             => 'Minimum nomber of slide side by side',
+    'id'               => $prefix . 'min_slide_radio',
+    'type'             => 'radio_inline',
+    'options'          => array(
+        '1'     => __( '1', 'cmb2' ),
+        '2'     => __( '2', 'cmb2' ),
+        '3'     => __( '3', 'cmb2' ),
+        '4'     => __( '4', 'cmb2' ),
+        '5'     => __( '5', 'cmb2' ),
+    	),
+    ) );
+
+	$cmb_dance_dancer_options->add_field( array(
+    'name'             => 'Slide Max',
+    'desc'             => 'Maximum nomber of slide side by side',
+    'id'               => $prefix . 'max_slide_radio',
+    'type'             => 'radio_inline',
+    'options'          => array(
+        '1'     => __( '1', 'cmb2' ),
+        '2'     => __( '2', 'cmb2' ),
+        '3'     => __( '3', 'cmb2' ),
+        '4'     => __( '4', 'cmb2' ),
+        '5'     => __( '5', 'cmb2' ),
+    	),
+    ) );
+
 }
 
 /*===================================================================

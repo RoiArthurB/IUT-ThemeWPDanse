@@ -24,7 +24,7 @@ $args = array (
 		'opt_name' => $opt_name,
 		'use_cdn' => TRUE,
 		'page_slug' => '_options',
-		'page_title' => 'Music Theme Options',
+		'page_title' => 'Dance Theme Options',
 		'update_notice' => TRUE,
 		'intro_text' => '<p>Introduction Text</p>',
 		'footer_text' => '<p>Footer Text</p>',
@@ -67,31 +67,27 @@ $args = array (
 		'transient_time' => '3600',
 		'network_sites' => TRUE,
 		'display_version' => '1.0',
-		'display_name' => 'Music Theme Options' ,
+		'display_name' => 'Dance Theme Options' ,
 		'dev_mode' => false
 );
 
 // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
 $args ['share_icons'] [] = array (
-		'url' => 'https://github.com/ReduxFramework/ReduxFramework',
-		'title' => 'Visit us on GitHub',
+		'url' => 'https://github.com/RoiArthurB/ThemeWPDanse',
+		'title' => 'Visit me on GitHub',
 		'icon' => 'el el-github' 
 );
 // 'img' => '', // You can use icon OR img. IMG needs to be a full URL.
 
+
 $args ['share_icons'] [] = array (
-		'url' => 'https://www.facebook.com/pages/Redux-Framework/243141545850368',
-		'title' => 'Like us on Facebook',
-		'icon' => 'el el-facebook' 
-);
-$args ['share_icons'] [] = array (
-		'url' => 'http://twitter.com/reduxframework',
-		'title' => 'Follow us on Twitter',
+		'url' => 'http://twitter.com/RoiArthurB',
+		'title' => 'Follow me on Twitter',
 		'icon' => 'el el-twitter' 
 );
 $args ['share_icons'] [] = array (
-		'url' => 'http://www.linkedin.com/company/redux-framework',
-		'title' => 'Find us on LinkedIn',
+		'url' => 'https://fr.linkedin.com/in/arthurbrugiere',
+		'title' => 'Find me on LinkedIn',
 		'icon' => 'el el-linkedin' 
 );
 
@@ -138,24 +134,124 @@ Redux::setSection ( $opt_name, array (
 		'icon' => 'el el-adjust-alt',
 		'fields' => array (
 				array (
-						'id' => 'opt-layout',
-						'type' => 'image_select',
-						'title' => __ ( 'Site Layout', 'starter' ),
-						'options'  => array(
-						        'container-fluid'      => array(
-						            'alt'   => 'full-width', 
-						            'img'   => ReduxFramework::$_url.'assets/img/1col.png'
-						        ),
-						        'container'      => array(
-						            'alt'   => 'fixed-width', 
-						            'img'   => ReduxFramework::$_url.'assets/img/3cm.png'
-						        )
-						    ),
-						    'default' => 'container'
-				)
+					'id' => 'opt-layout',
+					'type' => 'image_select',
+					'title' => __ ( 'Site Layout', 'starter' ),
+					'options'  => array(
+					        'container-fluid'      => array(
+					            'alt'   => 'full-width', 
+					            'img'   => ReduxFramework::$_url.'assets/img/1col.png'
+					        ),
+					        'container'      => array(
+					            'alt'   => 'fixed-width', 
+					            'img'   => ReduxFramework::$_url.'assets/img/3cm.png'
+					        )
+					    ),
+					'default' => 'container'
+				),
+				array (
+	                'id'       => 'switch-slider-home-page',
+	                'type'     => 'switch',
+	                'title'    => __( 'Slider Home Page', 'redux-framework-demo' ),
+	                'subtitle' => __( 'To display or not the slider on the home page', 'redux-framework-demo' ),
+	                'default'  => true
+            	),
+            	array(
+	                'id'            => 'home-slide-size',
+	                'type'          => 'slider',
+	                'title'         => __( 'Slide Width Size', 'redux-framework-demo' ),
+	                'subtitle'      => __( 'Set the width size of the slide (in px)', 'redux-framework-demo' ),
+	                'desc'          => __( 'Slider description. Min: 1, max: 1000', 'redux-framework-demo' ),
+	                'default'       => '500',
+	                'min'           => 1,
+	                'step'          => 1,
+	                'max'           => 1000,
+	                'display_value' => 'label'
+	            ),
+/*	            array(
+                'id'            => 'home-slider-select',
+                'type'          => 'slider',
+                'title'         => __( 'Slider Home Page', 'redux-framework-demo' ),
+                'subtitle'      => __( 'To display or not the slider on the home page', 'redux-framework-demo' ),
+                'desc'          => __( 'Slider description. Min: 1, max: 10', 'redux-framework-demo' ),
+                'default'       => array(
+                    1 => 2,
+                    2 => 10,
+                ),
+                'min'           => '1',
+                'step'          => 1,
+                'max'           => '10',
+                'display_value' => 'select',
+                'handles'       => 2,
+            ),*/
+				array (
+	                'id'       => 'switch-pager-home-page',
+	                'type'     => 'switch',
+	                'title'    => __( 'Pager Slider', 'redux-framework-demo' ),
+	                'subtitle' => __( 'To display or not the pager under the slider on the home page', 'redux-framework-demo' ),
+	                'default'  => false
+            	),
+				array (
+	                'id'       => 'switch-caption-home-page',
+	                'type'     => 'switch',
+	                'title'    => __( 'Caption Slider', 'redux-framework-demo' ),
+	                'subtitle' => __( 'To display or not slide\' caption on the home page', 'redux-framework-demo' ),
+	                'default'  => true
+            	),
 		)
 ) );
 
+// -> START Dancer Settings
+    Redux::setSection( $opt_name, array(
+        'title'            => __( 'Dancer Settings', 'dance' ),
+        'id'               => 'dancer',
+        'customizer_width' => '400px',
+        'icon'             => 'el el-person',
+        'fields'           => array(
+            array(
+                'id'       => 'dancer-switch-slider',
+                'type'     => 'switch',
+                'title'    => __( 'Slider Dancer Page', 'redux-framework-demo' ),
+                'subtitle' => __( 'To display or not the slider on the dancer page', 'redux-framework-demo' ),
+                'default'  => true,
+            ),
+        	array(
+                'id'            => 'dancer-slide-size',
+                'type'          => 'slider',
+                'title'         => __( 'Slide Width Size', 'redux-framework-demo' ),
+                'subtitle'      => __( 'Set the width size of the slide (in px)', 'redux-framework-demo' ),
+                'desc'          => __( 'Slider description. Min: 1, max: 1000', 'redux-framework-demo' ),
+                'default'       => 300,
+                'min'           => 1,
+                'step'          => 1,
+                'max'           => 1000,
+                'display_value' => 'label'
+	        ),
+/*            array(
+                'id'            => 'dancer-slider-select',
+                'type'          => 'slider',
+                'title'         => __( 'Max Slide', 'redux-framework-demo' ),
+                'subtitle'      => __( 'Set min and max slide to display side by side', 'redux-framework-demo' ),
+                'desc'          => __( 'Slider description. Min: 1, max: 10', 'redux-framework-demo' ),
+                'default'       => array(
+                    1 => 1,
+                    2 => 5,
+                ),
+                'min'           => 1,
+                'step'          => 1,
+                'max'           => 10,
+                'display_value' => 'select',
+                'handles'       => 2,
+            ),*/
+            array(
+                'id'       => 'dancer-switch-pager',
+                'type'     => 'switch',
+                'title'    => __( 'Pager Slider', 'redux-framework-demo' ),
+                'subtitle' => __( 'To display or not the pager under the slider on the dancer page', 'redux-framework-demo' ),
+                'default'  => true,
+            ),
+        )
+    ) );
 
 /*
  * <--- END SECTIONS

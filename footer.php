@@ -41,9 +41,9 @@
 			<script type="text/javascript" src="<?php echo get_template_directory(); ?>/js/jquery.bxslider.min.js"></script>  -->
 			<!-- Isotope -->
 			<script type ="text/javascript" src="http://localhost/wordpressthemeoce/wp-content/themes/dance/js/isotope.pkgd.min.js"></script>
-			<script type ="text/javascript" src="http://localhost/wordpressthemeoce/wp-content/themes/dance/js/app.js"></script> 
 			<!-- bxslider -->
 			<script type ="text/javascript" src="http://localhost/wordpressthemeoce/wp-content/themes/dance/js/jquery.bxslider.min.js"></script> 
+			<script type ="text/javascript" src="http://localhost/wordpressthemeoce/wp-content/themes/dance/js/app.js"></script> 
 		</div>
 		<!-- Fin .container -->
 	</body>

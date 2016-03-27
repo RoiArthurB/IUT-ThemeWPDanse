@@ -11,7 +11,7 @@
     }
 
     // This is your option name where all the Redux data is stored.
-    $opt_name = "redux_musique";
+    $opt_name = "redux_dance";
 
     /**
      * ---> SET ARGUMENTS
@@ -22,10 +22,10 @@
     $theme = wp_get_theme(); // For use with some settings. Not necessary.
 
     $args = array(
-        'opt_name' => 'redux_musique',
+        'opt_name' => 'redux_dance',
         'use_cdn' => TRUE,
         'page_slug' => '_options',
-        'page_title' => 'Music Theme Options',
+        'page_title' => 'Dance Theme Options',
         'update_notice' => TRUE,
         'intro_text' => '<p>Introduction Text</p>',
         'footer_text' => '<p>Footer Text</p>',
@@ -68,7 +68,7 @@
         'transient_time' => '3600',
         'network_sites' => TRUE,
         'display_version' => '1.0',
-        'display_name' => 'Music Theme Options',
+        'display_name' => 'Dance Theme Options',
     );
 
     // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
