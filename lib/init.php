@@ -9,8 +9,6 @@ function dance_setup() {
 
 	add_theme_support ( 'custom-header' );
 	add_theme_support ( 'post-thumbnails' );
-
-	add_image_size ( 'bxFormat', 500, 500, true );
 }
 endif;
 add_action ( 'after_setup_theme', 'dance_setup' );
@@ -30,7 +28,7 @@ function dance_widgets_init() {
 			'before_widget' => '<div id="%1$s" class="">',
 			'after_widget' => '</div>',
 			'before_title' => '<h4 class="widget-title penci-border-arrow"><span class="inner-arrow">',
-			'after_title' => '</span></h4></div><div class="panel-body">'
+			'after_title' => '</span></h4></div><div class="widget-body">'
 	) );
 }
 endif;

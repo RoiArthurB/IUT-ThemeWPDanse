@@ -97,12 +97,21 @@
 .penci-border-arrow:after {
 	border: 1px solid #313131;
 	left: -5px;
-	bottom: 3px;
+	top: -3px;
 	display: block;
 	z-index: 1;
 	height: 100%;
 }
-
+.widget-body {
+	padding: 10px;
+}
+.widget-body li {
+	list-style: circle;
+}
+.widget-body a {
+	text-decoration: none;
+	color: black;
+}
 
 /*===================================================================
  x                                                                  x
