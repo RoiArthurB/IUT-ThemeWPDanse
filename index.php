@@ -22,7 +22,7 @@
 		<li><img src="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 500,500 ), true, '' ); echo $src[0];?>" title="<?php the_title(); ?>"/></li>
 
 	<?php else : //Si non?>
-		<li><img src="http://localhost/wordpressthemeoce/wp-content/themes/dance/images/photo_no_available_dance.jpg" title="<?php the_title(); ?>"/></li>
+		<li><img src="http://localhost/wordpressthemeoce/wp-content/themes/dance/images/photo_no_available_spectacle500x500.jpg" title="<?php the_title(); ?>"/></li>
 
 	<?php endif; ?>
 	<?php endwhile;?>
