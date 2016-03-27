@@ -8,6 +8,8 @@ function dance_scripts() {
 	wp_enqueue_style ( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
 	wp_enqueue_style ( 'dance-style', get_template_directory_uri () . '/css/dance.css' );
 	wp_enqueue_style ( 'options-style', get_template_directory_uri () . '/css/redux_dance.css' );
+	wp_enqueue_style ( 'bxSlider', get_template_directory_uri () . '/lib/jquery.bxslider.css' );
+	
 }
 
 

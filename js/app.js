@@ -10,7 +10,7 @@ $(document).ready(function(){
 	pager: false,
 	minSlides: 2,
 	maxSlides: 4,
-	slideWidth: 170,
+	slideWidth: 500,
 //	slideHeight: 170,
 	slideMargin: 10
   });

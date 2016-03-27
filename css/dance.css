@@ -168,9 +168,6 @@
 	-o-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
-.header-social a:hover i{
-	color: #6eb48c;
-}
 
 #footer a{
 	color: black;
