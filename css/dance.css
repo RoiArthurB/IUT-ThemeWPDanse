@@ -8,14 +8,20 @@ a {
 	text-decoration: none;
 }
 
+.media-left {
+  padding-top: 2em;
+  padding-left: 2em;
+  display: table-cell;
+  vertical-align: top;
+}
+
 /*===================================================================
  x                                                                  x
  x                     		Isotope				                    x
  x                                                                  x
 ===================================================================*/
 
-.grid-item { width: 33%; }
-.grid-item--width2 { width: 66%; }
+.grid-item { width: 50%; }
 .grid-item--full { width: 100%; }
 
 

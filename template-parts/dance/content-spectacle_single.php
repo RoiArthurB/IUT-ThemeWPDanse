@@ -26,7 +26,9 @@
 	</div>
 </div>
 <div class="spectacles-content">
-	<p><?php the_author();?> | <?php the_taxonomies() ?></p>
+
+		<p><?php the_author() ?> | <?php the_taxonomies(); ?></p>
+
 	<hr>
 	<?php the_content( ); ?>
 </div>

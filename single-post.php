@@ -4,9 +4,10 @@
 			<div class="text-center" style="text-transform: uppercase;"><?php the_category(', ');?></div>
 			<h3 class="text-center" style="text-transform: uppercase;"><?php the_title(); ?></h3>
 			<div class="text-center">
-				<span>written by <?php the_author(); //TODO Pk ça marche pas? :( ) ?></span>
+				<p>written by <?php the_author(); ?> | <?php echo get_the_date() ?></p>
+	<!--			<span><?php the_author() //TODO Pk ça marche pas? :( ) ?></span>
 				<span>|</span>
-				<span><?php echo get_the_date(); ?></span>
+				<span><?php echo get_the_date(); ?></span>-->
 			</div>
 			<?php if(has_post_thumbnail($post->ID)) : ?>
 			<div class="text-center" style="padding: 10px">
