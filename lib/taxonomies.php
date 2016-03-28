@@ -33,7 +33,7 @@ function dance_style_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'dance_style', array( 'dancer' ), $args );
+	register_taxonomy( 'dance_style', array( 'dancer', 'spectacle' ), $args );
 
 }
 add_action( 'init', 'dance_style_taxonomy', 0 );

@@ -136,8 +136,9 @@ function dance_register_spectacle_date_picker_metabox() {
 	) );
 
 	$cmb_dance_spectacle_date_picker->add_field( array(
-    'name' => __('date Picker','dance'),
+ //   'name' => __('date Picker','dance'),
     'id' => $prefix . 'date_picker',
     'type' => 'text_date_timestamp',
+    'date_format' => 'd-m-Y',
 	) );
 }

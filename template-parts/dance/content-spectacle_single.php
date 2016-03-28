@@ -4,6 +4,16 @@
 	$color   = get_post_meta( get_the_ID(), '_dance_dancer_options_dancer_color', true );
 	$datePicker = get_post_meta (get_the_ID(), '_dance_spectacle_date_picker', true );
 ?>
+<div class="text-center" style="text-transform: uppercase;">
+	<?php if ($datePicker && the_taxonomies()) : ?> 
+		<span><?php echo $datePicker ?></span><span> | </span><span><?php the_taxonomies(', '); ?></span>
+	<?php elseif ($datePicker) : ?>
+		<span><?php echo $datePicker ?></span>
+	<?php elseif (the_taxonomies()) : ?>
+		<span><?php the_taxonomies(', '); ?></span>
+	<?php endif; ?>
+<?php the_title( "<h3 class=''>", "</h3>" ); ?>
+	</div>
 <div class="thumbnail dancer">
 	<?php if(has_post_thumbnail($post->ID)) : ?>
 		<?php echo get_the_post_thumbnail( $post->ID, 'normal' ); ?>
@@ -15,13 +25,12 @@
 		<a style="color:<?php echo $color; ?>" href="<?php echo esc_url($twitter_url); ?>"><i class="fa fa-twitter fa-3x"></i></a>
 	</div>
 </div>
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title"><?php the_title( "<h3 class=''>", "</h3>" ); ?></h3>
-    <h4><?php echo $datePicker ?></h4>
-  </div>
-  <div class="panel-body">
-	<?php the_taxonomies();?>
-    <?php the_content( ); ?>
-  </div>
+<div class="spectacles-content">
+	<p><?php the_author();?> | <?php the_taxonomies() ?></p>
+	<hr>
+	<?php the_content( ); ?>
+</div>
+<hr>
+<div class="spectacle-comment">
+	<?php comments_template('/comments.php', true); ?> 
 </div>

@@ -6,6 +6,10 @@ content-post{
 	<?php the_content() fonctionne pas..
 }
 
-date-picker spectacle
+	=>	CMB2! :'(
+date-picker spectacle{
+	comprendre format exec
+	pick future date
+}
 
 min/max slider ReduxFramework
