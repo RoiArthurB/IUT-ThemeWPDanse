@@ -1,7 +1,10 @@
 TODO:
 
 content-archive post
-content-post
+content-post{
+	<?php the_author() fonctionne pas..
+	<?php the_content() fonctionne pas..
+}
 
 date-picker spectacle
 
