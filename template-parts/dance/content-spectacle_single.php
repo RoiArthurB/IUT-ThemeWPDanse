@@ -30,8 +30,10 @@
 
 		<?php if (get_the_author() && get_the_taxonomies()) : ?>
 			<p><?php the_author() ?> | <?php the_taxonomies(); ?></p>
-		<?php else : ?>
+		<?php elseif (get_the_author()) : ?>
 			<p><?php the_author() ?></p>
+		<?php elseif (get_the_taxonomies()) : ?>
+			<p><?php the_taxonomies() ?></p>
 		<?php endif; ?>
 
 		<?php if ($vedette) : ?>
