@@ -3,6 +3,7 @@
 	$twitter_url   = get_post_meta( get_the_ID(), '_dance_dancer_social_twitter', true );
 	$color   = get_post_meta( get_the_ID(), '_dance_dancer_options_dancer_color', true );
 	$datePicker = get_post_meta (get_the_ID(), '_dance_spectacle_date_picker', true );
+	$vedette = get_post_meta (get_the_ID(), '_dancer_star_dancer_star', true );
 ?>
 <div class="text-center" style="text-transform: uppercase;">
 	<?php if ($datePicker && the_taxonomies()) : ?> 
@@ -27,12 +28,17 @@
 </div>
 <div class="spectacles-content">
 
-		<p><?php the_author() ?> | <?php the_taxonomies(); ?></p>
+		<?php if (get_the_author() && get_the_taxonomies()) : ?>
+			<p><?php the_author() ?> | <?php the_taxonomies(); ?></p>
+		<?php else : ?>
+			<p><?php the_author() ?></p>
+		<?php endif; ?>
+
+		<?php if ($vedette) : ?>
+			<p>Il y aura <?php echo $vedette ?> en danseur star</p>
+		<?php endif; ?>
+		
 
 	<hr>
 	<?php the_content( ); ?>
-</div>
-<hr>
-<div class="spectacle-comment">
-	<?php comments_template('/comments.php', true); ?> 
 </div>
