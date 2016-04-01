@@ -29,7 +29,7 @@ $slideCaption = $redux_starter['switch-caption-home-page'];
 				<li><img src="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 500,500 ), true, '' ); echo $src[0];?>" title="<?php the_title(); ?>"/></li>
 
 			<?php else : //Si non?>
-				<li><img src="http://localhost/wordpressthemeoce/wp-content/themes/dance/images/photo_no_available_spectacle500x500.jpg" title="<?php the_title(); ?>"/></li>
+				<li><img src="<?php echo get_template_directory_uri(); ?>/images/photo_no_available_spectacle500x500.jpg" title="<?php the_title(); ?>"/></li>
 
 			<?php endif; ?>
 			<?php endwhile;?>
