@@ -4,12 +4,52 @@
  */
 global $redux_starter;
 $layout = $redux_starter["opt-layout"];
-?><!DOCTYPE html>
+
+$lRegular = $redux_starter['opt-link-color']['regular'];
+$lHover   = $redux_starter['opt-link-color']['hover'];
+$lActive  = $redux_starter['opt-link-color']['active'];
+$lVisited = $redux_starter['opt-link-color']['visited'];
+
+//$bgColor = $redux_starter['opt-bg-color'];
+
+// Background color
+$bgColor = $redux_starter['opt-background']['background-color'];
+ 
+// Background image.
+$bgImage = $redux_starter['opt-background']['background-image'];
+ 
+// Background image options
+$bgRepeat = $redux_starter['opt-background']['background-repeat'];
+$bgPosition = $redux_starter['opt-background']['background-position'];
+$bgSize = $redux_starter['opt-background']['background-size'];
+$bgAttachment = $redux_starter['opt-background']['background-attachment'];
+ 
+// Media values
+$imgHeight = $redux_starter['opt-background']['media']['height'];
+$imgWidth = $redux_starter['opt-background']['media']['width'];
+$imgThumbnail = $redux_starter['opt-background']['media']['thumbnail'];
+?>
+
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php wp_head(); ?>
+
+		<style>
+			a{ color: <?php echo $lRegular ?>;}
+			a:hover{ color: <?php echo $lHover ?>;}
+			a:active{ color: <?php echo $lActive ?>;}
+			a:visited{ color: <?php echo $lVisited ?>;}
+
+			body{ background-color: <?php echo $bgColor ?>;}
+			body{ background-position: : <?php echo $bgPosition ?>;}
+			body{ background-size: <?php echo $bgSize ?>;}
+			body{ background-attachment: <?php echo $bgAttachment ?>;}
+			body{ background-image: <?php echo $imgThumbnail ?>;}
+		</style>
+
 	</head>
 	<body <?php body_class(); ?>>
 		<div class="<?php echo $layout; ?>">

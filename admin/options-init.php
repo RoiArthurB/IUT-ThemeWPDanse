@@ -149,6 +149,37 @@ Redux::setSection ( $opt_name, array (
 					    ),
 					'default' => 'container'
 				),
+				array(
+				    'id'       => 'opt-link-color',
+				    'type'     => 'link_color',
+				    'title'    => __('Color Links', 'starter'),
+				    'subtitle' => __('Only color validation can be done on this field type', 'starter'),
+				    'desc'     => __('Choose the different color for the different state of your links.', 'starter'),
+				    'default'  => array(
+				        'regular'  => '#1e73be', // blue
+				        'hover'    => '#dd3333', // red
+				        'active'   => '#8224e3',  // purple
+				        'visited'  => '#8224e3',  // purple
+				    )
+				),
+				array(         
+				    'id'       => 'opt-background',
+				    'type'     => 'background',
+				    'title'    => __('Body Background', 'starter'),
+				    'subtitle' => __('Body background with image, color, etc.', 'starter'),
+				//    'desc'     => __('This is the description field, again good for additional info.', 'starter'),
+				    'default'  => array(
+				        'background-color' => '#fff',
+				    ),
+				),
+		)
+) );
+
+Redux::setSection ( $opt_name, array (
+		'title' => __ ( 'Home slider', 'starter' ),
+		'id' => 'homePage',
+		'icon' => 'el el-home',
+		'fields' => array (
 				array (
 	                'id'       => 'switch-slider-home-page',
 	                'type'     => 'switch',
