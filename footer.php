@@ -1,4 +1,4 @@
-			<footer id="footer" class="row">
+			<footer id="footer" class="row" style="clear: both;">
 				<div class="col-md-12" style="text-align: center;">
 				<?php if ( is_active_sidebar( 'secondary_navigation' ) ) : ?>
 					<?php
