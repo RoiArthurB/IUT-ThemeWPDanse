@@ -1,11 +1,5 @@
 TODO:
 
-content-archive post
-content-post{
-	<?php the_author() fonctionne pas..
-	<?php the_content() fonctionne pas..
-}
-
 	=>	CMB2! :'(
 date-picker spectacle{
 	comprendre format exec
