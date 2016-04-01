@@ -142,3 +142,23 @@ function dance_register_spectacle_date_picker_metabox() {
     'date_format' => 'd-m-Y',
 	) );
 }
+add_action( 'cmb2_admin_init', 'dance_register_spectacle_dancer_star_metabox' );
+function dance_register_spectacle_dancer_star_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_dancer_star_';
+
+	$cmb_dance_spectacle_dancer_star = new_cmb2_box( array(
+			'id'            => $prefix . 'metabox',
+			'title'         => __( 'Dancers', 'dance' ),
+			'object_types'  => array( 'spectacle' )
+	) );
+
+	$cmb_dance_spectacle_dancer_star->add_field( array(
+			'name' => 'Dancer star',
+			'desc' => 'Dancer star in the spectacle',
+			'id'   => $prefix . 'dancer_star',
+			'type' => 'select',
+			'options' => 'get_dancers_array'
+	) );	
+}
