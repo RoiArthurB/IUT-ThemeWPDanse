@@ -16,8 +16,7 @@ $slideCaption = $redux_starter['switch-caption-home-page'];
 		
 		$loop = new WP_Query( $args ); //Define the loop based on arguments
 		?>
-
-		<?php if ($slider == true) : ?> 
+		<?php if ($slider == true && is_front_page()) : ?> 
 			<ul class="bxslider" data-bx-size="<?php echo $slideSize ?>" data-bx-slide-nbr="<?php // echo $slideSelect ?>" data-bx-pager="<?php echo $slidepager ?>" data-bx-caption="<?php $slideCaption ?>">
 
 			<?php //Display the contents
@@ -60,5 +59,4 @@ $slideCaption = $redux_starter['switch-caption-home-page'];
 			<?php get_sidebar();?>
 		</div>
 	</div>
-</div>
 <?php get_footer();?>
