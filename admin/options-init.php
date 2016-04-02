@@ -102,16 +102,16 @@ Redux::setArgs ( $opt_name, $args );
  */
 
 $tabs = array (
-		array (
-				'id' => 'redux-help-tab-1',
-				'title' => __ ( 'Theme Information 1', 'admin_folder' ),
-				'content' => __ ( '<p>This is the tab content, HTML is allowed.</p>', 'admin_folder' ) 
-		),
-		array (
-				'id' => 'redux-help-tab-2',
-				'title' => __ ( 'Theme Information 2', 'admin_folder' ),
-				'content' => __ ( '<p>This is the tab content, HTML is allowed.</p>', 'admin_folder' ) 
-		) 
+	array (
+		'id' => 'redux-help-tab-1',
+		'title' => __ ( 'Theme Information 1', 'admin_folder' ),
+		'content' => __ ( '<p>This is the tab content, HTML is allowed.</p>', 'admin_folder' ) 
+	),
+	array (
+		'id' => 'redux-help-tab-2',
+		'title' => __ ( 'Theme Information 2', 'admin_folder' ),
+		'content' => __ ( '<p>This is the tab content, HTML is allowed.</p>', 'admin_folder' ) 
+	) 
 );
 Redux::setHelpTab ( $opt_name, $tabs );
 
@@ -128,161 +128,192 @@ Redux::setHelpSidebar ( $opt_name, $content );
  * ---> START SECTIONS
  *
  */
-Redux::setSection ( $opt_name, array (
-		'title' => __ ( 'General', 'starter' ),
-		'id' => 'general',
-		'icon' => 'el el-adjust-alt',
-		'fields' => array (
-				array (
-					'id' => 'opt-layout',
-					'type' => 'image_select',
-					'title' => __ ( 'Site Layout', 'starter' ),
-					'options'  => array(
-					        'container-fluid'      => array(
-					            'alt'   => 'full-width', 
-					            'img'   => ReduxFramework::$_url.'assets/img/1col.png'
-					        ),
-					        'container'      => array(
-					            'alt'   => 'fixed-width', 
-					            'img'   => ReduxFramework::$_url.'assets/img/3cm.png'
-					        )
-					    ),
-					'default' => 'container'
-				),
-				array(
-				    'id'       => 'opt-link-color',
-				    'type'     => 'link_color',
-				    'title'    => __('Color Links', 'starter'),
-				    'subtitle' => __('Only color validation can be done on this field type', 'starter'),
-				    'desc'     => __('Choose the different color for the different state of your links.', 'starter'),
-				    'default'  => array(
-				        'regular'  => '#1e73be', // blue
-				        'hover'    => '#dd3333', // red
-				        'active'   => '#8224e3',  // purple
-				        'visited'  => '#8224e3',  // purple
-				    )
-				),
-				array(         
-				    'id'       => 'opt-background',
-				    'type'     => 'background',
-				    'title'    => __('Body Background', 'starter'),
-				    'subtitle' => __('Body background with image, color, etc.', 'starter'),
-				//    'desc'     => __('This is the description field, again good for additional info.', 'starter'),
-				    'default'  => array(
-				        'background-color' => '#fff',
-				    ),
-				),
-		)
-) );
+
+/*===================================================================
+ x                                                                  x
+ x                     	General Slider			                    x
+ x                                                                  x
+===================================================================*/
 
 Redux::setSection ( $opt_name, array (
-		'title' => __ ( 'Home slider', 'starter' ),
-		'id' => 'homePage',
-		'icon' => 'el el-home',
-		'fields' => array (
-				array (
-	                'id'       => 'switch-slider-home-page',
-	                'type'     => 'switch',
-	                'title'    => __( 'Slider Home Page', 'redux-framework-demo' ),
-	                'subtitle' => __( 'To display or not the slider on the home page', 'redux-framework-demo' ),
-	                'default'  => true
-            	),
-            	array(
-	                'id'            => 'home-slide-size',
-	                'type'          => 'slider',
-	                'title'         => __( 'Slide Width Size', 'redux-framework-demo' ),
-	                'subtitle'      => __( 'Set the width size of the slide (in px)', 'redux-framework-demo' ),
-	                'desc'          => __( 'Slider description. Min: 1, max: 1000', 'redux-framework-demo' ),
-	                'default'       => '500',
-	                'min'           => 1,
-	                'step'          => 1,
-	                'max'           => 1000,
-	                'display_value' => 'label'
-	            ),
-/*	            array(
-                'id'            => 'home-slider-select',
-                'type'          => 'slider',
-                'title'         => __( 'Slider Home Page', 'redux-framework-demo' ),
-                'subtitle'      => __( 'To display or not the slider on the home page', 'redux-framework-demo' ),
-                'desc'          => __( 'Slider description. Min: 1, max: 10', 'redux-framework-demo' ),
-                'default'       => array(
-                    1 => 2,
-                    2 => 10,
-                ),
-                'min'           => '1',
-                'step'          => 1,
-                'max'           => '10',
-                'display_value' => 'select',
-                'handles'       => 2,
-            ),*/
-				array (
-	                'id'       => 'switch-pager-home-page',
-	                'type'     => 'switch',
-	                'title'    => __( 'Pager Slider', 'redux-framework-demo' ),
-	                'subtitle' => __( 'To display or not the pager under the slider on the home page', 'redux-framework-demo' ),
-	                'default'  => false
-            	),
-				array (
-	                'id'       => 'switch-caption-home-page',
-	                'type'     => 'switch',
-	                'title'    => __( 'Caption Slider', 'redux-framework-demo' ),
-	                'subtitle' => __( 'To display or not slide\' caption on the home page', 'redux-framework-demo' ),
-	                'default'  => true
-            	),
-		)
-) );
-
-// -> START Dancer Settings
-    Redux::setSection( $opt_name, array(
-        'title'            => __( 'Dancer Settings', 'dance' ),
-        'id'               => 'dancer',
-        'customizer_width' => '400px',
-        'icon'             => 'el el-person',
-        'fields'           => array(
-            array(
-                'id'       => 'dancer-switch-slider',
-                'type'     => 'switch',
-                'title'    => __( 'Slider Dancer Page', 'redux-framework-demo' ),
-                'subtitle' => __( 'To display or not the slider on the dancer page', 'redux-framework-demo' ),
-                'default'  => true,
+	'title' => __ ( 'General', 'starter' ),
+	'id' => 'general',
+	'icon' => 'el el-adjust-alt',
+	'fields' => array (
+		array (
+			'id' => 'opt-layout',
+			'type' => 'image_select',
+			'title' => __ ( 'Site Layout', 'starter' ),
+			'options'  => array(
+			        'container-fluid'      => array(
+			            'alt'   => 'full-width', 
+			            'img'   => ReduxFramework::$_url.'assets/img/1col.png'
+			        ),
+			        'container'      => array(
+			            'alt'   => 'fixed-width', 
+			            'img'   => ReduxFramework::$_url.'assets/img/3cm.png'
+			        )
+			    ),
+			'default' => 'container'
+		),
+		array(
+		    'id'       => 'opt-link-color',
+		    'type'     => 'link_color',
+		    'title'    => __('Color Links', 'starter'),
+		    'subtitle' => __('Only color validation can be done on this field type', 'starter'),
+		    'desc'     => __('Choose the different color for the different state of your links.', 'starter'),
+		    'default'  => array(
+		        'regular'  => '#1e73be', // blue
+		        'hover'    => '#dd3333', // red
+		        'active'   => '#8224e3',  // purple
+		        'visited'  => '#8224e3',  // purple
+		    )
+		),
+		array(         
+		    'id'       => 'opt-background',
+		    'type'     => 'background',
+		    'title'    => __('Body Background', 'starter'),
+		    'subtitle' => __('Body background with image, color, etc.', 'starter'),
+		//    'desc'     => __('This is the description field, again good for additional info.', 'starter'),
+		    'default'  => array(
+		        'background-color' => '#fff',
+		    ),
+		),
+        array(
+            'id'       => 'post-select-layout',
+            'type'     => 'select',
+            'title'    => __( 'Layout for post', 'starter' ),
+            'subtitle' => __( 'Go here for preview : <a href="http://isotope.metafizzy.co/layout-modes.html" target="_blank">http://isotope.metafizzy.co/layout-modes.html</a>', 'starter' ),
+            'options'  => array(
+            	'masonry' => 'masonry',
+            	'fitRows' => 'fitRows',
+            	'cellsByRow' => 'cellsByRow',
+            	'vertical' => 'vertical',
             ),
-        	array(
-                'id'            => 'dancer-slide-size',
-                'type'          => 'slider',
-                'title'         => __( 'Slide Width Size', 'redux-framework-demo' ),
-                'subtitle'      => __( 'Set the width size of the slide (in px)', 'redux-framework-demo' ),
-                'desc'          => __( 'Slider description. Min: 1, max: 1000', 'redux-framework-demo' ),
-                'default'       => 300,
-                'min'           => 1,
-                'step'          => 1,
-                'max'           => 1000,
-                'display_value' => 'label'
-	        ),
+            'default' => 'fitRows',
+        ),
+	)
+) );
+
+/*===================================================================
+ x                                                                  x
+ x                     		Home Slider			                    x
+ x                                                                  x
+===================================================================*/
+
+Redux::setSection ( $opt_name, array (
+	'title' => __ ( 'Home slider', 'starter' ),
+	'id' => 'homePage',
+	'icon' => 'el el-home',
+	'fields' => array (
+		array (
+            'id'       => 'switch-slider-home-page',
+            'type'     => 'switch',
+            'title'    => __( 'Slider Home Page', 'redux-framework-demo' ),
+            'subtitle' => __( 'To display or not the slider on the home page', 'redux-framework-demo' ),
+            'default'  => true
+    	),
+    	array(
+            'id'            => 'home-slide-size',
+            'type'          => 'slider',
+            'title'         => __( 'Slide Width Size', 'redux-framework-demo' ),
+            'subtitle'      => __( 'Set the width size of the slide (in px)', 'redux-framework-demo' ),
+            'desc'          => __( 'Slider description. Min: 1, max: 1000', 'redux-framework-demo' ),
+            'default'       => '500',
+            'min'           => 1,
+            'step'          => 1,
+            'max'           => 1000,
+            'display_value' => 'label'
+        ),
+/*	    array(
+            'id'            => 'home-slider-select',
+            'type'          => 'slider',
+            'title'         => __( 'Slider Home Page', 'redux-framework-demo' ),
+            'subtitle'      => __( 'To display or not the slider on the home page', 'redux-framework-demo' ),
+            'desc'          => __( 'Slider description. Min: 1, max: 10', 'redux-framework-demo' ),
+            'default'       => array(
+                1 => 2,
+                2 => 10,
+            ),
+            'min'           => '1',
+            'step'          => 1,
+            'max'           => '10',
+            'display_value' => 'select',
+            'handles'       => 2,
+        ),*/
+		array (
+            'id'       => 'switch-pager-home-page',
+            'type'     => 'switch',
+            'title'    => __( 'Pager Slider', 'redux-framework-demo' ),
+            'subtitle' => __( 'To display or not the pager under the slider on the home page', 'redux-framework-demo' ),
+            'default'  => false
+    	),
+		array (
+            'id'       => 'switch-caption-home-page',
+            'type'     => 'switch',
+            'title'    => __( 'Caption Slider', 'redux-framework-demo' ),
+            'subtitle' => __( 'To display or not slide\' caption on the home page', 'redux-framework-demo' ),
+            'default'  => true
+    	),
+	)
+) );
+
+/*===================================================================
+ x                                                                  x
+ x                 		Dancer Settings			                    x
+ x                                                                  x
+===================================================================*/
+
+Redux::setSection( $opt_name, array(
+    'title'            => __( 'Dancer Settings', 'dance' ),
+    'id'               => 'dancer',
+    'customizer_width' => '400px',
+    'icon'             => 'el el-person',
+    'fields'           => array(
+        array(
+            'id'       => 'dancer-switch-slider',
+            'type'     => 'switch',
+            'title'    => __( 'Slider Dancer Page', 'redux-framework-demo' ),
+            'subtitle' => __( 'To display or not the slider on the dancer page', 'redux-framework-demo' ),
+            'default'  => true,
+        ),
+    	array(
+            'id'            => 'dancer-slide-size',
+            'type'          => 'slider',
+            'title'         => __( 'Slide Width Size', 'redux-framework-demo' ),
+            'subtitle'      => __( 'Set the width size of the slide (in px)', 'redux-framework-demo' ),
+            'desc'          => __( 'Slider description. Min: 1, max: 1000', 'redux-framework-demo' ),
+            'default'       => 300,
+            'min'           => 1,
+            'step'          => 1,
+            'max'           => 1000,
+            'display_value' => 'label'
+        ),
 /*            array(
-                'id'            => 'dancer-slider-select',
-                'type'          => 'slider',
-                'title'         => __( 'Max Slide', 'redux-framework-demo' ),
-                'subtitle'      => __( 'Set min and max slide to display side by side', 'redux-framework-demo' ),
-                'desc'          => __( 'Slider description. Min: 1, max: 10', 'redux-framework-demo' ),
-                'default'       => array(
-                    1 => 1,
-                    2 => 5,
-                ),
-                'min'           => 1,
-                'step'          => 1,
-                'max'           => 10,
-                'display_value' => 'select',
-                'handles'       => 2,
-            ),*/
-            array(
-                'id'       => 'dancer-switch-pager',
-                'type'     => 'switch',
-                'title'    => __( 'Pager Slider', 'redux-framework-demo' ),
-                'subtitle' => __( 'To display or not the pager under the slider on the dancer page', 'redux-framework-demo' ),
-                'default'  => true,
+            'id'            => 'dancer-slider-select',
+            'type'          => 'slider',
+            'title'         => __( 'Max Slide', 'redux-framework-demo' ),
+            'subtitle'      => __( 'Set min and max slide to display side by side', 'redux-framework-demo' ),
+            'desc'          => __( 'Slider description. Min: 1, max: 10', 'redux-framework-demo' ),
+            'default'       => array(
+                1 => 1,
+                2 => 5,
             ),
-        )
-    ) );
+            'min'           => 1,
+            'step'          => 1,
+            'max'           => 10,
+            'display_value' => 'select',
+            'handles'       => 2,
+        ),*/
+        array(
+            'id'       => 'dancer-switch-pager',
+            'type'     => 'switch',
+            'title'    => __( 'Pager Slider', 'redux-framework-demo' ),
+            'subtitle' => __( 'To display or not the pager under the slider on the dancer page', 'redux-framework-demo' ),
+            'default'  => true,
+        ),
+    )
+) );
 
 /*
  * <--- END SECTIONS

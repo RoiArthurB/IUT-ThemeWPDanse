@@ -8,6 +8,9 @@ $slideSize = $redux_starter['home-slide-size'];
 // $slideSelectMin = $redux_starter['home-slide-select'];
 $slidepager = $redux_starter['switch-pager-home-page'];
 $slideCaption = $redux_starter['switch-caption-home-page'];
+
+$isotopeLayout = $redux_starter['post-select-layout'];
+?>
 ?>
 <?php get_header(); ?>
 	<div class="row" style="padding-bottom: 40px;">
@@ -38,7 +41,7 @@ $slideCaption = $redux_starter['switch-caption-home-page'];
 	</div>
 	<div class="row">
 		<div class="col-md-9 ">
-			<div class="grid">
+			<div class="grid" data-layout="<?php echo $isotopeLayout ?>">
 				<?php if ( have_posts() ) : ?>
 				<?php while (have_posts()) : the_post(); ?>
 				<div class="grid-item">

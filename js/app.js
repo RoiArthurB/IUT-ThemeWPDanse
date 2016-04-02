@@ -1,9 +1,3 @@
-$('.grid').isotope({
-    // options
-    itemSelector: '.grid-item',
-    layoutMode: 'masonry'
-});
-
 jQuery(document).ready(function($) {
 
     $('.bxslider').each(function() {
@@ -42,4 +36,14 @@ jQuery(document).ready(function($) {
         });
     });
 
+    $('.grid').each(function() {
+        
+        var isotopeLayout = $(this).data('layout');
+
+        $(this).isotope({
+            // options
+            itemSelector: '.grid-item',
+            layoutMode: isotopeLayout
+        });
+    })
 });
