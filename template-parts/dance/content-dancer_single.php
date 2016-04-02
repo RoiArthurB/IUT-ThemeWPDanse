@@ -4,6 +4,9 @@
 	$color   = get_post_meta( get_the_ID(), '_dance_dancer_social_dancer_color', true );
 	$galery = get_post_meta(get_the_ID(), '_dance_dancer_options_galery', true );
 ?>
+
+<?php the_title( "<h1 class='text-center'>", "</h1>" ); ?>
+
 <div class="thumbnail dancer">
 	<?php if(has_post_thumbnail($post->ID)) : ?>
 		<?php echo get_the_post_thumbnail( $post->ID, 'normal' ); ?>
@@ -15,13 +18,10 @@
 		<a style="color:<?php echo $color; ?>" href="<?php echo esc_url($twitter_url); ?>"><i class="fa fa-twitter fa-3x"></i></a>
 	</div>
 </div>
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title"><?php the_title( "<h3 class=''>", "</h3>" ); ?></h3>
-  </div>
-  <div class="panel-body">
+<div class="dancer-content">
+    <?php the_title( "<h3 class=''>", "</h3>" ); ?>
 	<?php the_taxonomies();?>
+  <hr>
     <?php the_content( ); ?>
-  </div>
 </div>
 <?php cmb2_output_file_list( 'wiki_test_file_list', 'medium' ); ?>
