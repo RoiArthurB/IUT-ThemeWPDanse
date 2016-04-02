@@ -123,23 +123,23 @@ function dance_register_dancer_options_metabox() {
  x                                                                  x
 ===================================================================*/
 
-add_action( 'cmb2_admin_init', 'dance_register_spectacle_date_picker_metabox' );
-function dance_register_spectacle_date_picker_metabox() {
+add_action( 'cmb2_admin_init', 'dance_register_spectacle_date_metabox' );
+function dance_register_spectacle_date_metabox() {
 
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_dance_spectacle_';
 
-	$cmb_dance_spectacle_date_picker = new_cmb2_box( array(
+	$cmb_dance_spectacle_date = new_cmb2_box( array(
 			'id'            => $prefix . 'metabox',
-			'title'         => __( 'date Picker', 'dance' ),
+			'title'         => __( 'Date', 'dance' ),
 			'object_types'  => array( 'spectacle' )
 	) );
 
-	$cmb_dance_spectacle_date_picker->add_field( array(
- //   'name' => __('date Picker','dance'),
-    'id' => $prefix . 'date_picker',
-    'type' => 'text_date_timestamp',
-    'date_format' => 'd-m-Y',
+	$cmb_dance_spectacle_date->add_field( array(
+//    'name' => __('Date','dance'),
+    'desc' => 'Enter the date here (in wich format you like)',
+    'id' => $prefix . 'date',
+    'type' => 'text_medium'
 	) );
 }
 add_action( 'cmb2_admin_init', 'dance_register_spectacle_dancer_star_metabox' );

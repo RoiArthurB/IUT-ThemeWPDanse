@@ -2,17 +2,27 @@
 	$facebook_url   = get_post_meta( get_the_ID(), '_dance_dancer_social_facebook', true );
 	$twitter_url   = get_post_meta( get_the_ID(), '_dance_dancer_social_twitter', true );
 	$color   = get_post_meta( get_the_ID(), '_dance_dancer_options_dancer_color', true );
-	$datePicker = get_post_meta (get_the_ID(), '_dance_spectacle_date_picker', true );
+
+	$date = get_post_meta (get_the_ID(), '_dance_spectacle_date', true );
+
 	$vedette = get_post_meta (get_the_ID(), '_dancer_star_dancer_star', true );
 ?>
 <div class="text-center" style="text-transform: uppercase;">
-	<?php if ($datePicker && the_taxonomies()) : ?> 
-		<span><?php echo $datePicker ?></span><span> | </span><span><?php the_taxonomies(', '); ?></span>
-	<?php elseif ($datePicker) : ?>
-		<span><?php echo $datePicker ?></span>
-	<?php elseif (the_taxonomies()) : ?>
+
+	<?php if ( $date && get_the_taxonomies() ) : ?> 
+
+		<span><?php echo $date ?></span><span> | </span><span><?php the_taxonomies(', '); ?></span>
+
+	<?php elseif ( $date ) : ?>
+
+		<span><?php echo $date ?></span>
+
+	<?php elseif ( get_the_taxonomies() ) : ?>
+
 		<span><?php the_taxonomies(', '); ?></span>
+
 	<?php endif; ?>
+
 <?php the_title( "<h3 class=''>", "</h3>" ); ?>
 	</div>
 <div class="thumbnail dancer">
@@ -29,11 +39,17 @@
 <div class="spectacles-content">
 
 		<?php if (get_the_author() && get_the_taxonomies()) : ?>
+
 			<p><?php the_author() ?> | <?php the_taxonomies(); ?></p>
+
 		<?php elseif (get_the_author()) : ?>
+
 			<p><?php the_author() ?></p>
+
 		<?php elseif (get_the_taxonomies()) : ?>
+
 			<p><?php the_taxonomies() ?></p>
+
 		<?php endif; ?>
 
 		<?php if ($vedette) : ?>
