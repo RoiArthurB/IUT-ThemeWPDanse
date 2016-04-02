@@ -10,7 +10,7 @@ $slidepager = $redux_starter['switch-pager-home-page'];
 $slideCaption = $redux_starter['switch-caption-home-page'];
 
 $isotopeLayout = $redux_starter['post-select-layout'];
-?>
+
 ?>
 <?php get_header(); ?>
 	<div class="row" style="padding-bottom: 40px;">
