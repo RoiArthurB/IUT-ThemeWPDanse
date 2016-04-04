@@ -13,12 +13,13 @@ $isotopeLayout = $redux_starter['post-select-layout'];
 
 ?>
 <?php get_header(); ?>
+
 	<div class="row" style="padding-bottom: 40px;">
-		<?php	// Caroussel des prochains spectacles	
-		$args = array('post_type' => 'spectacle');
-		
-		$loop = new WP_Query( $args ); //Define the loop based on arguments
-		?>
+
+<?php	// Caroussel des prochains spectacles	
+$args = array('post_type' => 'spectacle');
+$loop = new WP_Query( $args ); //Define the loop based on arguments
+?>
 		<?php if ($slider == true && is_front_page()) : ?> 
 			<ul class="bxslider" data-bx-size="<?php echo $slideSize ?>" data-bx-slide-nbr="<?php // echo $slideSelect ?>" data-bx-pager="<?php echo $slidepager ?>" data-bx-caption="<?php $slideCaption ?>">
 
@@ -46,8 +47,11 @@ $isotopeLayout = $redux_starter['post-select-layout'];
 
 			</ul>
 		<?php endif; ?>
+
 	</div>
+
 	<div class="row">
+	<?php if ( is_active_sidebar("sidebar-1")) : ?>
 		<div class="col-md-9 ">
 			<div class="grid" data-layout="<?php echo $isotopeLayout ?>">
 				<?php if ( have_posts() ) : ?>
@@ -69,5 +73,24 @@ $isotopeLayout = $redux_starter['post-select-layout'];
 		<div id="sidebar" class="col-md-3 hidden-xs hidden-sm">
 			<?php get_sidebar();?>
 		</div>
+	<?php else : ?>
+		<div class="col-md-12">
+			<div class="grid" data-layout="<?php echo $isotopeLayout ?>">
+				<?php if ( have_posts() ) : ?>
+				<?php while (have_posts()) : the_post(); ?>
+				<div class="grid-item">
+					<?php
+						get_template_part( 'template-parts/content', get_post_format() );
+					?>
+				</div>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php
+					get_template_part( 'template-parts/content', 'none' );
+				?>
+				<?php endif; ?>
+			</div>
+		</div>
+	<?php endif; ?>
 	</div>
 <?php get_footer();?>
